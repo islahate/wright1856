@@ -27,8 +27,8 @@ define("ADMIN_PERMISSION", "admin_permission");
 define("HOST", "localhost");
 define("NAME", "islahato_w");
 define("USER", "islahato_w");
-define("PASS", 'K!QticKTe$lX');
-define("SITE_WEB", "https://www.islahate.ovh/");
+define("PASS", '');
+define("SITE_WEB", "http://localhost/");
 
 /**
  *  GOOGLE ANALYTICS "oauth2"
@@ -36,15 +36,15 @@ define("SITE_WEB", "https://www.islahate.ovh/");
 define('CLIENT_ID', '');
 define('CLIENT_SECRET', '');
 define('REDIRECT', ''); // redirect page
-define('ACCOUNT_ID', 'ga:167336202'); // like ga:xxxxxxxxx
+define('ACCOUNT_ID', ''); // like ga:xxxxxxxxx
 
 
 /**
  *  SMTP configuration
  */
 define("SMTP_DEBUG", 2);
-define("SMTP_HOST", 'smtp.office365.com');
+define("SMTP_HOST", '');
 define("SMTP_PORT", 587);
-define("SMTP_USER", 'contact@islahate.ma');
-define("SMTP_PASS", 'reception@18');
-define("SMTP_SENDER_NAME", "contact");
+define("SMTP_USER", '');
+define("SMTP_PASS", '');
+define("SMTP_SENDER_NAME", "");
