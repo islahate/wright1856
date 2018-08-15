@@ -1,0 +1,67 @@
+$(document).ready(function () {
+
+    $('input[name=phone]').mask('0000-00 00 00');
+    $('select[name=lieu]').niceSelect();
+
+
+    $('.tab').css('display', 'none');
+    $('.tab').first().fadeIn();
+
+    $('.collections ul li').on('click', function () {
+        $('.collections ul li').removeClass('active');
+        $(this).addClass('active');
+
+        $('.tab').css('display', 'none');
+
+
+        var label = $(this).attr('aria-label');
+        $('div[aria-controls=' + label + ']').fadeIn();
+    });
+
+
+    $('.open_clendar').on('click', function () {
+
+        // $('.cover-modal, .modal-formulaire').fadeToggle("slow");
+
+
+        if ( $('.modal-formulaire').is(':visible') ){
+            $('.cover-modal').fadeOut('slow');
+            $('.modal-formulaire').hide("slide", { direction: "right" }, 1400);
+
+        }else{
+            $('.cover-modal').fadeIn('slow');
+            $('.modal-formulaire').show('slide', {direction: 'right'}, 1400);
+        }
+
+
+
+
+
+        // .spin-p, .spin-m
+        $('.spin-m').on('click', function () {
+            var number = $('input[name=nombre]').val();
+            if(number == '' || number == undefined || isNaN(number))
+                number = 0;
+
+            var _number = parseInt(number);
+            if(_number > 0) _number -= 1;
+
+            $('input[name=nombre]').val(_number);
+        });
+
+        $('.spin-p').on('click', function () {
+            var number = $('input[name=nombre]').val();
+            if(number == '' || number == undefined || isNaN(number))
+                number = 0;
+
+            var _number = parseInt(number);
+            _number += 1;
+
+            $('input[name=nombre]').val(_number);
+        });
+
+
+
+
+    });
+});

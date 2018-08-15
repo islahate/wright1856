@@ -1,0 +1,386 @@
+<style type="text/css">
+    .nice-select:after{
+        border-bottom: none;
+        border-right: none;
+        background-image: url("<?= WEBROOT ?>img/location.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-transform-origin: unset;
+        -ms-transform-origin: unset;
+        transform-origin: unset;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        -webkit-transition: none;
+        transition:none;
+        width: 13px;
+        height: 25px;
+        top: calc(50% - 8px);
+    }
+
+    .nice-select.open:after {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+
+    #main{
+        padding-top: 8%;
+    }
+
+    .spin-p, .spin-m{
+        position: absolute;
+        right: 2px;
+        top: 0;
+        width: 20px;
+        color: #978B65 !important;
+        height: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .spin-m{
+        top: 18px;
+    }
+
+    .input_date{
+        background-image: url(<?= WEBROOT ?>img/datetime.png);
+        background-repeat: no-repeat;
+        background-size: 17px;
+        background-position-x: 97%;
+        background-position-y: center;
+    }
+    .clendar_open{
+        top: calc(50% - 70px)!important;
+        height: 184px!important;
+        transition: all 500ms;
+        transition-delay: 200ms
+    }
+    .reserv{
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari 3-8 */
+        transform: rotate(-90deg);
+        margin-bottom: 0;
+    }
+    /*.img_op{*/
+        /*padding: 28px 0px 39px 0px;*/
+    /*}*/
+    .c-scrolldown {
+        width: 1px;
+        height: 100px;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .c-line {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
+        background-position: 0 -100px;
+        background-size: 100% 200%;
+        animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    }
+
+
+</style>
+
+
+
+<section id="main">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="color-white noselect" style="letter-spacing: 0.4em"><?= $params['SITE_NAME'] ?></h1>
+            <div class="sub-title noselect" style="letter-spacing: 0.25em"><?= $params['SITE_SLEGON'] ?></div>
+        </div>
+    </div>
+
+    <div class="row" style="height: 20em; margin: 3em 0;">
+        <div class="col-md-12">
+            <div class="c-scrolldown">
+                <div class="c-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a href="#" class="btn-principal noselect" style="width: 20em; min-width: 18em;"><?= ACCUEIL_CTA ?></a>
+        </div>
+    </div>
+</section>
+
+<div class="container" style="margin-bottom: 20px">
+
+    <div class="row bloc">
+        <div class="col-md-12 ">
+
+            <div class="collections">
+                <ul>
+                    <li aria-label="tab1" class="active"><?= ACCUEIL_TABS_TAB1_TITLE ?></li>
+                    <li aria-label="tab2"><?= ACCUEIL_TABS_TAB2_TITLE ?></li>
+                    <li aria-label="tab3"><?= ACCUEIL_TABS_TAB3_TITLE ?></li>
+                </ul>
+
+                <div class="indicators">
+                    <div class="indic">
+                        <div class="rec active" aria-label="tab1"></div>
+                        <div class="rec" aria-label="tab2"></div>
+                        <div class="rec" aria-label="tab3"></div>
+                    </div>
+                </div>
+                <div class="tab" aria-controls="tab1" style="background-image: url(/webroot/images/Heritage_bg.png); background-repeat: no-repeat; background-size: contain;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="heading">
+                                <h2 class="collection_title h-zantit"><?= ACCUEIL_TABS_TAB1_TITLE ?></h2>
+                                <p class="collection_subtitle "><?= ACCUEIL_TABS_TAB1_SUB_TITLE ?></p>
+                            </div>
+                            <p style="margin-top: 120px" class="text">
+                                La collection HÉRITAGE est une ode au Maroc et à son patrimoine. Conçue comme
+                                une
+                                célébration des
+                                richesses du royaume, elle propose un voyage sensoriel à travers cinq gammes :
+                                1856,
+                                Palais
+                                Mauresque,
+                                Vallée des Roses, Riad des Saâdiens et Rubis de Siroua.
+                            </p>
+                            <p class="text">
+                                Des provinces du Rif à la route de-s Kasbahs du Sud, des cimes montagneuses aux
+                                espaces oasiens, des
+                                plaines aériennes aux collines verdoyantes, HÉRITAGE vous invite à découvrir les
+                                parfums d'un Maroc
+                                pluriel et authentique, où les senteurs de la menthe, des roses, de l’origan et
+                                du
+                                safran se mêlent﻿
+                                subtilement à la chaleur et à la tonicité du thé vert.
+                            </p>
+                            <p class="text">
+                                Symbole de l'hospitalité et des traditions séculaires du pays, HÉRITAGE est un
+                                véritable hymne au
+                                mystère, à la poésie et à l’art de vivre d'un Maroc aux mille visages.
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-8">
+                            <a href="<?= SITE_WEB ?>collections/heritage"><img src="<?= WEBROOT ?>images/groupe_de_masques_1.png"/></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab" aria-controls="tab2" style="background-image: url(/webroot/img/Escapade_bg.png); background-repeat: no-repeat; background-size: contain;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="heading">
+                                <h2 class="collection_title h-zantit"><?= ACCUEIL_TABS_TAB2_TITLE ?></h2>
+                                <p class="collection_subtitle "><?= ACCUEIL_TABS_TAB2_SUB_TITLE ?></p>
+                            </div>
+                            <p style="margin-top: 120px" class="text">
+                                La collection HÉRITAGE est une ode au Maroc et à son patrimoine. Conçue comme
+                                une célébration des
+                                richesses du royaume, elle propose un voyage sensoriel à travers cinq gammes :
+                                1856, Palais
+                                Mauresque,
+                                Vallée des Roses, Riad des Saâdiens et Rubis de Siroua.
+                            </p>
+                            <p class="text">
+                                Des provinces du Rif à la route de-s Kasbahs du Sud, des cimes montagneuses aux
+                                espaces oasiens, des
+                                plaines aériennes aux collines verdoyantes, HÉRITAGE vous invite à découvrir les
+                                parfums d'un Maroc
+                                pluriel et authentique, où les senteurs de la menthe, des roses, de l’origan et
+                                du safran se mêlent﻿
+                                subtilement à la chaleur et à la tonicité du thé vert.
+                            </p>
+                            <p class="text">
+                                Symbole de l'hospitalité et des traditions séculaires du pays, HÉRITAGE est un
+                                véritable hymne au
+                                mystère, à la poésie et à l’art de vivre d'un Maroc aux mille visages.
+                            </p>
+                        </div>
+                        <div class="col-md-8">
+                            <a href="<?= SITE_WEB ?>collections/escapade"><img src="<?= WEBROOT ?>images/groupe_de_masques_1.png"/></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab" aria-controls="tab3" style="background-image: url(/webroot/img/1001nuits_bg.png); background-repeat: no-repeat; background-size: contain;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="heading">
+                                <h2 class="collection_title h-zantit"><?= ACCUEIL_TABS_TAB3_TITLE ?></h2>
+                                <p class="collection_subtitle "><?= ACCUEIL_TABS_TAB3_SUB_TITLE ?></p>
+                            </div>
+                            <p style="margin-top: 120px" class="text">
+                                La collection HÉRITAGE est une ode au Maroc et à son patrimoine. Conçue
+                                comme
+                                une célébration des
+                                richesses du royaume, elle propose un voyage sensoriel à travers cinq gammes
+                                :
+                                1856, Palais
+                                Mauresque,
+                                Vallée des Roses, Riad des Saâdiens et Rubis de Siroua.
+                            </p>
+                            <p class="text">
+                                Des provinces du Rif à la route de-s Kasbahs du Sud, des cimes montagneuses
+                                aux
+                                espaces oasiens, des
+                                plaines aériennes aux collines verdoyantes, HÉRITAGE vous invite à découvrir
+                                les
+                                parfums d'un Maroc
+                                pluriel et authentique, où les senteurs de la menthe, des roses, de l’origan
+                                et
+                                du safran se mêlent﻿
+                                subtilement à la chaleur et à la tonicité du thé vert.
+                            </p>
+                            <p class="text">
+                                Symbole de l'hospitalité et des traditions séculaires du pays, HÉRITAGE est
+                                un
+                                véritable hymne au
+                                mystère, à la poésie et à l’art de vivre d'un Maroc aux mille visages.
+                            </p>
+                        </div>
+                        <div class="col-md-8">
+                            <a href="<?= SITE_WEB ?>collections/1001-nuits"><img src="<?= WEBROOT ?>images/groupe_de_masques_1.png"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history">
+        <div class="history_title text-center">
+            <h2 class="spedial-heading title"><span>L'histoire de la maison</span></h2>
+            <p class="history_subtitle ">LOREM IPSUM HOLY VISON</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4 overflow" style="height: 528px;">
+                    <img src="<?= WEBROOT ?>images/img1 (1).png" class="img-fluid scal" />
+                </div>
+                <div class="col-md-3" style="height: 528px">
+                    <div class="row" style="height: 50%;">
+                        <div class="col-md-12 overflow" style="height: 100%;">
+                            <img src="<?= WEBROOT ?>images/img1 (6).png" class="img-fluid scal" />
+                        </div>
+                    </div>
+                    <div class="row" style="height: 50%;">
+                        <div class="col-md-12 overflow" style="height: 100%;">
+                            <img src="<?= WEBROOT ?>images/img1 (5).png" class="img-fluid scal" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5 overflow" style="height: 528px; background-image: url('<?= WEBROOT ?>images/img1 (4).png'); background-repeat: no-repeat; background-position-y: bottom; background-position-x: center;">
+                    <div class="history_description">
+                        <h5 style="font-size: 18px; margin-bottom: 25px; padding: 12px 0 0 15px;">L'histoire de la maison</h5>
+                        <div class="histoire_txt">
+                            <p style="margin-bottom: 10px">L’histoire de la Maison Wright est intimement liée à celle des comptoirs du Maroc lorsque, en 1856, la Compagnie des Indes achemina les premières cargaisons de thé à Tanger et Essaouira. Dotés des plus beaux services, +dessinés par le célèbre argentier britannique Richard Wright, les salons des grandes familles du royaume.</p><p>L’histoire de la Maison Wright est intimement liée à celle des comptoirs du Maroc lorsque, en 1856, la Compagnie des Indes achemina les premières cargaisons de thé à Tanger et Essaouira. Dotés des plus beaux services, +dessinés par le célèbre argentier britannique Richard Wright, les salons des grandes familles du royaume offrent à cette époque la quintessence du thé</p>
+                        </div>
+                    </div>
+
+<!--                    <div class="col-md-7" style="height: 100%;">-->
+<!--                        <img src="--><?//= WEBROOT ?><!--images/img1 (4).png" class="img-fluid scal" style="height: 100%" />-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cover-modal" style="display: none"></div>
+<div class="modal-formulaire" style="display: none">
+    <div class="row" style="height: 100%;">
+        <div class="col-md-2" style="background-image: url('<?= WEBROOT ?>img/calendar.png'); background-repeat: no-repeat; background-position: center; background-size: 130px;">
+            <h2 class="text-center noselect" style="position: absolute; top: calc(50% - 30px); width: 100%; font-size: 2em;">
+                <small style="display: block; font-size: 56%!important;">Reservez votre table</small>
+                maintenant
+            </h2>
+        </div>
+        <div class="col-md-10">
+            <div class="container">
+                <form style="margin-top: 23px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="main_input form-text" placeholder="<?= ACCUEIL_FORM_RESERVATION_INSCRIPTION_NAME ?>" style="width: 100%; margin: 10px 0;"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group" style="position: relative;">
+                                <input type="text" class="main_input form-text" name="nombre" placeholder="<?= ACCUEIL_FORM_RESERVATION_INSCRIPTION_NOMBRE ?>" style="width: 100%; margin: 10px 0;"/>
+                                <a class="spin-p noselect">+</a>
+                                <a class="spin-m noselect">-</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="main_input form-text" placeholder="<?= ACCUEIL_FORM_RESERVATION_INSCRIPTION_MAIL ?>" style="width: 100%; margin: 10px 0;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="main_input form-text" name="phone" placeholder="<?= ACCUEIL_FORM_RESERVATION_INSCRIPTION_TELEPHONE ?>" style="width: 100%; margin: 10px 0;"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-top: 5px;">
+<!--                                <input type="text" class="main_input form-text" placeholder="--><?//= ACCUEIL_FORM_RESERVATION_INSCRIPTION_LIEU ?><!--" style="width: 100%; margin: 10px 0;"/>-->
+
+                                <select name="lieu">
+                                    <option value="1">Triangle d'or (Casablanca)</option>
+                                    <option value="2">Morocco mall (Casablanca)</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="main_input form-text input_date datepicker" placeholder="<?= ACCUEIL_FORM_RESERVATION_INSCRIPTION_DATE ?>" style="width: 100%; margin: 10px 0;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group text-right">
+                                <button type="button" class="btn-principal noselect" style="width: 250px; margin-top: 20px;"><?= ACCUEIL_FORM_RESERVATION_INSCRIPTION_SEND ?></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="open_clendar d-flex align-items-center justify-content-center"><img class="img_op"  src="<?= WEBROOT ?>img/reservation_icon.png"><p class="reserv d-none">Reservation</p></div>
+
+<script type="text/javascript" src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+
+<script type="text/javascript" src="<?= WEBROOT ?>js/accueil.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.history_description').on('mouseenter', function () {
+            $(this).animate({height: 75+'%'}, 300);
+        });
+
+        $('.history_description').on('mouseleave', function () {
+            $(this).animate({height: 40+'%'}, 300);
+        });
+    });
+</script>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>le thé</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.js"></script>
+</head>
+<style>
+    /*body {*/
+        /*font-family: Esmeralda Pro;*/
+        /*background-color: black;*/
+    /*}*/
+
+    .showcase {
+        height: 200px;
+        width: 100%;
+        margin-bottom: 100px;
+
+        /*background-image: url("*/<?//= WEBROOT ?>/*images/lethe_bg.png");*/
+        /*background-position: bottom;*/
+    }
+
+    .title {
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+    }
+
+    .title span {
+        display: inline-block;
+        position: relative;
+    }
+
+    .tea_name span {
+        display: inline-block;
+        position: relative;
+    }
+
+    .tea_name span:before {
+        content: "";
+        position: absolute;
+        height: 0px;
+        border-top: 1px solid #D2BC76;
+        top: 12px;
+        width: 75px;
+        right: 100% !important;
+        margin-right: 7px;
+    }
+
+    .title span:before {
+        content: "";
+        position: absolute;
+        height: 0px;
+        border-top: 2px solid #D2BC76;
+        top: 58px;
+        width: 100px;
+        right: 100% !important;
+        margin-right: 7px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        color: #D2BC76;
+        float: left;
+
+    }
+
+    .the_slider {
+        min-height: 260px;
+        margin-bottom: 80px;
+    }
+
+    .the_slider .container .row .col {
+        padding-right: 4px !important;
+        padding-left: 4px !important;
+        cursor: pointer;
+    }
+
+    /*.the_slider .container .row .col .room_img img {*/
+    /*width: 100%;*/
+    /*}*/
+    .the_slider .container .row .col .room_img {
+        background-color: #D2BC76;
+        height: 100%;
+    }
+
+    .the_slider .container .row .item:hover .overlay  {
+        opacity: 1;
+    }
+    .the_slider .container .row .active .overlay{
+        opacity: 1!important;
+    }
+    .the_slider .container .row .active span:after {
+        width: 32px;
+        transition: all 1s;
+
+    }
+    .the_slider .container .row .active .value{
+        transition: all 1s;
+        transform: translateX(13px)
+    }
+    .the_slider .container .row .active .tilte_ {
+
+        transition: all 1s;
+        transform: translateX(-12px);
+    }
+
+    .the_slider .container .row .item:hover .value {
+        /*padding-left: 20px;*/
+        transition: all 1s;
+        transform: translateX(13px);
+    }
+
+    .the_slider .container .row .item:hover .tilte_ {
+        /*padding-right: 30px;*/
+        transition: all 1s;
+        transform: translateX(-12px);
+    }
+
+    .the_slider .container .row .item:hover span:after {
+        width: 32px;
+        transition: all 1s;
+
+    }
+
+    .the_slider .container .row .col .overlay {
+        background-color: #000000d9;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .tilte_ {
+        color: #D2BC76;
+        margin-bottom: 0;
+    }
+
+    .value {
+        color: #D2BC76;
+        font-size: 34px;
+    }
+
+    .h-zantit_overlay:after {
+        content: "";
+        width: 0px;
+        display: block;
+        height: 1px;
+        background: #D2BC76;
+        margin-left: -84px;
+    }
+
+    .item {
+        height: 327px;
+    }
+
+    .tea_name {
+        font-size: 20px;
+        color: #D2BC76;
+        padding-left: 80px;
+        margin-bottom: 1.2em;
+    }
+
+    .the_info .container p {
+        color: #978B65;
+    }
+
+    .tea_fiche ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tea_fiche ul li {
+        width: 243px;
+        list-style-type: none;
+        color: #D2BC76;
+        height: 65px;
+        margin: 20px 0;
+        background-color: #111111;
+    }
+
+    .tea_fiche ul .active {
+        background-color: white;
+    }
+
+
+</style>
+<body>
+<div class="showcase d-flex align-items-center justify-content-center">
+    <div class="text-center">
+        <h1 class="color-white noselect h-zantit">LE THÉ</h1>
+        <p class="subtitle ">Vestibulum eget tort</p>
+    </div>
+</div>
+<div class="the_slider">
+    <div class="container">
+        <!--<div style="position: absolute;top: 504px;">-->
+        <div>
+            <div class="row ">
+
+                <div class="col item active" data-target="#carouselIndicators" data-slide-to="0">
+                    <div class="room_img d-flex align-items-center">
+                        <img   src="<?= WEBROOT ?>images/the_blanc.png" alt="">
+                    </div>
+                    <div class="overlay d-flex align-items-center justify-content-center flex-column">
+
+                        <p class="tilte_ text-center">Thé</p>
+                        <span class="h-zantit_overlay"></span>
+                        <h2 class="value text-center ">VERT</h2>
+
+                    </div>
+                </div>
+                <div class="col item" data-target="#carouselIndicators" data-slide-to="1">
+
+                    <div class="room_img d-flex align-items-center">
+                        <img   src= "<?= WEBROOT ?>images/the_oolong.png" alt="">
+                    </div>
+                    <div class="overlay d-flex align-items-center justify-content-center flex-column">
+                        <p class="tilte_ text-center h-zantit_overlay">Thé</p>
+                        <span class="h-zantit_overlay"></span>
+                        <h2 class="value text-center">VERT</h2>
+
+                    </div>
+                </div>
+                <div class="col item" data-target="#carouselIndicators" data-slide-to="2">
+                    <div class="room_img d-flex align-items-center">
+                        <img   src="<?= WEBROOT ?>images/the_rooibos2.png" alt="">
+                    </div>
+                    <div class="overlay d-flex align-items-center justify-content-center flex-column">
+                        <p class="tilte_ text-center h-zantit_overlay">Thé</p>
+                        <span class="h-zantit_overlay"></span>
+                        <h2 class="value text-center">VERT</h2>
+
+                    </div>
+                </div>
+                <div class="col item" data-target="#carouselIndicators" data-slide-to="3">
+                    <div class="room_img d-flex align-items-center">
+                        <img   src="<?= WEBROOT ?>images/the_vert.png" alt="">
+                    </div>
+                    <div class="overlay d-flex align-items-center justify-content-center flex-column">
+                        <p class="tilte_ text-center h-zantit_overlay">Thé</p>
+                        <span class="h-zantit_overlay"></span>
+                        <h2 class="value text-center">VERT</h2>
+
+                    </div>
+                </div>
+                <div class="col item" data-target="#carouselIndicators" data-slide-to="4">
+                    <div class="room_img d-flex align-items-center">
+                        <img   src="<?= WEBROOT ?>images/the_blanc.png" alt="">
+                    </div>
+                    <div class="overlay d-flex align-items-center justify-content-center flex-column">
+                        <p class="tilte_ text-center h-zantit_overlay">Thé</p>
+                        <span class="h-zantit_overlay"></span>
+                        <h2 class="value text-center">VERT</h2>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="the_info">
+    <div class="container">
+        <h4 class="tea_name "><span>Thé Vert</span></h4>
+        <p>Non fermentés en raison d’un séchage accéléré, les thés verts conservent toutes leurs vertus naturelles
+            (stimulants, antioxydants,
+            C) et doivent être consommés dans l’année de leur récolte, en raison de leur jeunesse et de la fragilité de
+            leurs feuilles. <br>
+            Ils se distinguent en quatre catégories : Gunpowder, ChunMee, Natural Leaf et Matcha.
+        </p>
+        <div class="row" style="margin-bottom: 90px;">
+            <div class="col-8 carousel slide carousel-fade" id="carouselIndicators" data-ride="carousel">
+
+                <div class="tea_img carousel-item active">
+                    <img src="<?= WEBROOT ?>images/black_tea.png" alt="">
+                </div>
+                <div class="tea_img carousel-item ">
+                    <img src="<?= WEBROOT ?>images/black_tea.png" alt="">
+                </div>
+                <div class="tea_img carousel-item  ">
+                    <img src="<?= WEBROOT ?>images/black_tea.png" alt="">
+                </div>
+                <div class="tea_img carousel-item  ">
+                    <img src="<?= WEBROOT ?>images/black_tea.png" alt="">
+                </div>
+                <div class="tea_img carousel-item  ">
+                    <img src="<?= WEBROOT ?>images/black_tea.png" alt="">
+                </div>
+            </div>
+            <div class="col-4 d-flex align-items-center justify-content-center">
+                <div class="carousel-inner">
+                <div class="tea_fiche text-center">
+                    <ul>
+                        <li class="d-flex align-items-center justify-content-center active">Flétrissage</li>
+                        <li class="d-flex align-items-center justify-content-center ">Fixation</li>
+                        <li class="d-flex align-items-center justify-content-center active">Roulage</li>
+                        <li class="d-flex align-items-center justify-content-center active">Oxydation</li>
+                        <li class="d-flex align-items-center justify-content-center">Fermentation</li>
+                        <li class="d-flex align-items-center justify-content-center active">Séchage</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+<!--        <div class="button_pink text-center">-->
+<!--            <a href="#">Découvrez L'epopée du Thé</a>-->
+<!--        </div>-->
+        <div class="col-md-12 text-center">
+            <a href="#" class="btn-principal noselect" style="width: 20em; min-width: 18em;">Decouvrir l'univers WRIGHT</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // start search -->
+        $('.item').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
+    });
+</script>
+
+</body>
+</html>
